@@ -10,6 +10,7 @@ import org.mockito.stubbing.Answer;
 import ru.gb.gbshopmart.dao.ManufacturerDao;
 import ru.gb.gbshopmart.entity.Manufacturer;
 import ru.gb.gbshopmart.web.dto.mapper.ManufacturerMapper;
+import ru.gb.gbshopmart.web.dto.ManufacturerDto;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

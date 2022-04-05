@@ -23,15 +23,15 @@ public class Category extends InfoEntity {
     @Column(name = "tittle")
     private String tittle;
 
-    @ManyToMany(mappedBy = "category", cascade = CascadeType.MERGE)
-    private Set<Product> products;
-
-    public boolean addProduct(Product product) {
-        if (products == null) {
-            products = new HashSet<>();
-        }
-        return products.add(product);
-    }
+//    @ManyToMany(mappedBy = "category", cascade = CascadeType.MERGE)
+//    private Set<Product> products;
+//
+//    public boolean addProduct(Product product) {
+//        if (products == null) {
+//            products = new HashSet<>();
+//        }
+//        return products.add(product);
+//    }
 
     @Override
     public String toString() {

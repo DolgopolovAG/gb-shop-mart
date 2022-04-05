@@ -2,7 +2,8 @@ package ru.gb.gbshopmart.entity;
 
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import ru.gb.gbapi.common.enums.Status;
+//import ru.gb.gbapi.common.enums.Status;
+import ru.gb.gbshopmart.entity.enums.Status;
 import ru.gb.gbshopmart.entity.common.InfoEntity;
 
 import javax.persistence.*;
