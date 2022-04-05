@@ -7,33 +7,32 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-//import ru.gb.gbapi.manufacturer.dto.ManufacturerDto;
-import ru.gb.gbshopmart.web.dto.ManufacturerDto;
-import ru.gb.gbshopmart.service.ManufacturerService;
+import ru.gb.gbshopmart.service.CategoryService;
+import ru.gb.gbshopmart.web.dto.CategoryDto;
 
 import java.net.URI;
 import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/manufacturer")
+@RequestMapping("/api/v1/category")
 @Slf4j
-public class ManufacturerController {
+public class CategoryController {
     
-    private final ManufacturerService manufacturerService;
+    private final CategoryService categoryService;
 
     @GetMapping
-    public List<ManufacturerDto> getManufacturerList() {
-        return manufacturerService.findAll();
+    public List<CategoryDto> getCategoryList() {
+        return categoryService.findAll();
     }
 
-    @GetMapping("/{manufacturerId}")
-    public ResponseEntity<?> getManufacturer(@PathVariable("manufacturerId") Long id) {
-        ManufacturerDto manufacturer;
+    @GetMapping("/{categoryId}")
+    public ResponseEntity<?> getCategory(@PathVariable("categoryId") Long id) {
+        CategoryDto category;
         if (id != null) {
-            manufacturer = manufacturerService.findById(id);
-            if (manufacturer != null) {
-                return new ResponseEntity<>(manufacturer, HttpStatus.OK);
+            category = categoryService.findById(id);
+            if (category != null) {
+                return new ResponseEntity<>(category, HttpStatus.OK);
             }
         }
         log.error("Retryer");
@@ -41,23 +40,23 @@ public class ManufacturerController {
     }
 
     @PostMapping
-    public ResponseEntity<?> handlePost(@Validated @RequestBody ManufacturerDto manufacturerDto) {
-        ManufacturerDto savedManufacturer = manufacturerService.save(manufacturerDto);
+    public ResponseEntity<?> handlePost(@Validated @RequestBody CategoryDto categoryDto) {
+        CategoryDto savedCategory = categoryService.save(categoryDto);
         HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setLocation(URI.create("/api/v1/manufacturer/" + savedManufacturer.getManufacturerId()));
+        httpHeaders.setLocation(URI.create("/api/v1/category/" + savedCategory.getId()));
         return new ResponseEntity<>(httpHeaders, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{manufacturerId}")
-    public ResponseEntity<?> handleUpdate(@PathVariable("manufacturerId") Long id, @Validated @RequestBody ManufacturerDto manufacturerDto) {
-        manufacturerDto.setManufacturerId(id);
-        manufacturerService.save(manufacturerDto);
+    @PutMapping("/{categoryId}")
+    public ResponseEntity<?> handleUpdate(@PathVariable("categoryId") Long id, @Validated @RequestBody CategoryDto categoryDto) {
+        categoryDto.setId(id);
+        categoryService.save(categoryDto);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping("/{manufacturerId}")
+    @DeleteMapping("/{categoryId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteById(@PathVariable("manufacturerId") Long id) {
-        manufacturerService.deleteById(id);
+    public void deleteById(@PathVariable("categoryId") Long id) {
+        categoryService.deleteById(id);
     }
 }
