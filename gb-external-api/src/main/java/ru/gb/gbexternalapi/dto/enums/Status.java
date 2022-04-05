@@ -1,4 +1,4 @@
-package ru.gb.lessons10.entity.enums;
+package ru.gb.gbexternalapi.dto.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
