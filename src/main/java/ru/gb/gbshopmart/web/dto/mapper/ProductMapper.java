@@ -29,7 +29,7 @@ public interface ProductMapper {
         return manufacturer.getName();
     }
 
-    default Set<Category> categoryDtoSetToCategorySet(Set<CategoryDto> categories, @Context CategoryDao categoryDao) {
+    default Set<Category> categoryDtoSetToCategorySet (Set<CategoryDto> categories, @Context CategoryDao categoryDao) {
         return categories.stream().map(c -> categoryDao.findById(c.getId())
                 .orElseThrow(
                         () -> new NoSuchElementException("There isn't category with id + " + c.getId()))

@@ -33,10 +33,8 @@ public class FeignClientFactory {
                 .decoder(new OptionalDecoder(new ResponseEntityDecoder(new SpringDecoder(this.messageConverters))))
                 .errorDecoder(errorDecoder())
                 .options(new Request.Options(
-                        gbApiProperties.getConnection().getConnectTimeout(),
-                        TimeUnit.SECONDS,
-                        gbApiProperties.getConnection().getReadTimeout(),
-                        TimeUnit.SECONDS,
+                        gbApiProperties.getConnection().getConnectTimeout(), TimeUnit.SECONDS,
+                        gbApiProperties.getConnection().getReadTimeout(), TimeUnit.SECONDS,
                         true
                 ))
                 .logger(new Slf4jLogger(requiredType))

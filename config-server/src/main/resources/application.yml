@@ -12,11 +12,11 @@ spring:
     config:
       server:
         git:
-          uri: ${GIT_URI:/Users/artemkropotov/java_projects/geekbrains/gb-settings-mart}
+          uri: ${GIT_URI:D:/VCS/GIT/gb-settings-mart}
           clone-on-start: true
           username: ${GIT_USERNAME:geek}
           password: ${GIT_PASSWORD:geek}
-        default-label: master
+        default-label: main
   security:
     user:
       name: ${SECURITY_USER:geek_user}
