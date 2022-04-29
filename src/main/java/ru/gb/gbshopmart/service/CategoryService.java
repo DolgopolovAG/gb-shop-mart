@@ -25,7 +25,7 @@ public class CategoryService {
     public CategoryDto save(final CategoryDto categoryDto) {
         Category category = categoryMapper.toCategory(categoryDto);
         if (category.getId() != null) {
-            categoryDao.findById(categoryDto.getId()).ifPresent(
+            categoryDao.findById(categoryDto.getCategoryId()).ifPresent(
                     (p) -> category.setVersion(p.getVersion())
             );
         }

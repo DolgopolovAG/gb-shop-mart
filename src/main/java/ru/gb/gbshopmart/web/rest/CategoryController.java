@@ -43,13 +43,13 @@ public class CategoryController {
     public ResponseEntity<?> handlePost(@Validated @RequestBody CategoryDto categoryDto) {
         CategoryDto savedCategory = categoryService.save(categoryDto);
         HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setLocation(URI.create("/api/v1/category/" + savedCategory.getId()));
+        httpHeaders.setLocation(URI.create("/api/v1/category/" + savedCategory.getCategoryId()));
         return new ResponseEntity<>(httpHeaders, HttpStatus.CREATED);
     }
 
     @PutMapping("/{categoryId}")
     public ResponseEntity<?> handleUpdate(@PathVariable("categoryId") Long id, @Validated @RequestBody CategoryDto categoryDto) {
-        categoryDto.setId(id);
+        categoryDto.setCategoryId(id);
         categoryService.save(categoryDto);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

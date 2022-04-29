@@ -30,9 +30,9 @@ public interface ProductMapper {
     }
 
     default Set<Category> categoryDtoSetToCategorySet(Set<CategoryDto> categories, @Context CategoryDao categoryDao) {
-        return categories.stream().map(c -> categoryDao.findById(c.getId())
+        return categories.stream().map(c -> categoryDao.findById(c.getCategoryId())
                 .orElseThrow(
-                        () -> new NoSuchElementException("There isn't category with id + " + c.getId()))
+                        () -> new NoSuchElementException("There isn't category with id + " + c.getCategoryId()))
                 )
                 .collect(Collectors.toSet());
     }
