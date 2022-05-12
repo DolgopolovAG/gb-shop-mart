@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.gb.gbapi.order.dto.OrderDto;
+import ru.gb.api.order.dto.OrderDto;
 import ru.gb.gbshopmart.service.OrderService;
 
 import java.net.URI;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/order")
 @Slf4j
-public class OrderController {
+public class OrderRestController {
 
     private final OrderService orderService;
 

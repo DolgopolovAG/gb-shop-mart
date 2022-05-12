@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.gb.gbapi.category.dto.CategoryDto;
+import ru.gb.api.category.dto.CategoryDto;
 import ru.gb.gbshopmart.service.CategoryService;
 
 import java.net.URI;
@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/category")
 @Slf4j
-public class CategoryController {
+public class CategoryRestController {
 
     private final CategoryService categoryService;
 

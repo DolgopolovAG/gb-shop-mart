@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.gb.gbapi.manufacturer.dto.ManufacturerDto;
+import ru.gb.api.manufacturer.dto.ManufacturerDto;
 import ru.gb.gbshopmart.service.ManufacturerService;
 
 import java.net.URI;
@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/manufacturer")
 @Slf4j
-public class ManufacturerController {
+public class ManufacturerRestController {
     
     private final ManufacturerService manufacturerService;
 

@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import ru.gb.gbapi.product.dto.ProductDto;
+import ru.gb.api.product.dto.ProductDto;
 import ru.gb.gbshopmart.service.ProductService;
 
 import java.net.URI;
@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/product")
-public class ProductController {
+public class ProductRestController {
 
     private final ProductService productService;
 
