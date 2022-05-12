@@ -1,4 +1,4 @@
-package ru.gb.gbshopmart.dao;
+package ru.gb.gbshopmart.entity.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import ru.gb.gbshopmart.entity.Address;

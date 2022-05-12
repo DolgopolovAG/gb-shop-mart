@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import ru.gb.gbapi.category.dto.CategoryDto;
-import ru.gb.gbshopmart.dao.CategoryDao;
+import ru.gb.gbshopmart.entity.dao.CategoryDao;
 import ru.gb.gbshopmart.entity.Category;
 import ru.gb.gbshopmart.web.dto.mapper.CategoryMapper;
 

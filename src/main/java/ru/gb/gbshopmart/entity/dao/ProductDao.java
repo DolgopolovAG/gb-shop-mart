@@ -1,4 +1,4 @@
-package ru.gb.gbshopmart.dao;
+package ru.gb.gbshopmart.entity.dao;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

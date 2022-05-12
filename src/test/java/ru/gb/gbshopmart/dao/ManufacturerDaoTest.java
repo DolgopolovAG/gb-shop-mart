@@ -6,6 +6,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
 import ru.gb.gbshopmart.config.ShopConfig;
 import ru.gb.gbshopmart.entity.Manufacturer;
+import ru.gb.gbshopmart.entity.dao.ManufacturerDao;
 
 import static org.junit.jupiter.api.Assertions.*;
 

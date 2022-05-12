@@ -2,12 +2,11 @@ package ru.gb.gbshopmart.web.dto.mapper;
 
 import org.mapstruct.Context;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 import ru.gb.gbapi.category.dto.CategoryDto;
 import ru.gb.gbapi.product.dto.ProductDto;
-import ru.gb.gbshopmart.dao.CategoryDao;
-import ru.gb.gbshopmart.dao.ManufacturerDao;
+import ru.gb.gbshopmart.entity.dao.CategoryDao;
+import ru.gb.gbshopmart.entity.dao.ManufacturerDao;
 import ru.gb.gbshopmart.entity.Category;
 import ru.gb.gbshopmart.entity.Manufacturer;
 import ru.gb.gbshopmart.entity.Product;

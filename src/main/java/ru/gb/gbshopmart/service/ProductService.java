@@ -12,9 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ru.gb.gbapi.common.enums.Status;
 import ru.gb.gbapi.product.dto.ProductDto;
-import ru.gb.gbshopmart.dao.CategoryDao;
-import ru.gb.gbshopmart.dao.ManufacturerDao;
-import ru.gb.gbshopmart.dao.ProductDao;
+import ru.gb.gbshopmart.entity.dao.CategoryDao;
+import ru.gb.gbshopmart.entity.dao.ManufacturerDao;
+import ru.gb.gbshopmart.entity.dao.ProductDao;
 import ru.gb.gbshopmart.entity.Product;
 import ru.gb.gbshopmart.web.dto.mapper.ProductMapper;
 

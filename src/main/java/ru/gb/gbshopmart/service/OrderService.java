@@ -11,9 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.gb.gbapi.events.OrderEvent;
 import ru.gb.gbapi.order.dto.OrderDto;
 import ru.gb.gbshopmart.config.JmsConfig;
-import ru.gb.gbshopmart.dao.CategoryDao;
-import ru.gb.gbshopmart.dao.ManufacturerDao;
-import ru.gb.gbshopmart.dao.OrderDao;
+import ru.gb.gbshopmart.entity.dao.CategoryDao;
+import ru.gb.gbshopmart.entity.dao.ManufacturerDao;
+import ru.gb.gbshopmart.entity.dao.OrderDao;
 import ru.gb.gbshopmart.entity.Order;
 import ru.gb.gbshopmart.web.dto.mapper.OrderMapper;
 

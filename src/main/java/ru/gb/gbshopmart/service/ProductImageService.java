@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
-import ru.gb.gbshopmart.dao.ProductImageDao;
+import ru.gb.gbshopmart.entity.dao.ProductImageDao;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
