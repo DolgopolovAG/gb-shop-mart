@@ -11,3 +11,5 @@ docker start [имя контейнера/хэш контейнера]
 docker ps  - посмотреть запущенные контейнеры
 docker images - посмотреть образы
 docker logs --tail 200
+
+docker run -p 8888:8888 --name config-server-mart-container -e  GIT_URI=/tmp/set  -v D:/Education/Java/Work/Spring2/lesson4/gb-settings-mart:/tmp/set -d  config-server-mart:latest

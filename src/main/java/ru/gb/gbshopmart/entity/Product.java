@@ -1,5 +1,6 @@
 package ru.gb.gbshopmart.entity;
 
+
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import ru.gb.gbapi.common.enums.Status;
@@ -9,6 +10,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Setter
@@ -28,6 +30,16 @@ public class Product extends InfoEntity {
     @ManyToOne
     @JoinColumn(name = "manufacturer_id")
     private Manufacturer manufacturer;
+
+    @Singular
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+    private List<ProductImage> images;
+
+    @Column(name = "short_description")
+    private String shortDescription;
+
+    @Column(name = "full_description")
+    private String fullDescription;
 
     @ManyToMany
     @JoinTable(

@@ -7,6 +7,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import ru.gb.gbapi.events.OrderEvent;
 import ru.gb.gbapi.order.dto.OrderDto;
 import ru.gb.gbshopmart.config.JmsConfig;

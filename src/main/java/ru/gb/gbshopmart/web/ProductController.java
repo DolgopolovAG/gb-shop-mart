@@ -6,7 +6,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.gb.api.product.dto.ProductDto;
+import ru.gb.gbapi.product.dto.ProductDto;
 import ru.gb.gbshopmart.entity.Product;
 import ru.gb.gbshopmart.service.CategoryService;
 import ru.gb.gbshopmart.service.ManufacturerService;

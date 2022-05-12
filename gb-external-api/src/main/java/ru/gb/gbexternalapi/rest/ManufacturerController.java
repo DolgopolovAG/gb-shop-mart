@@ -23,18 +23,18 @@ public class ManufacturerController {
 
     @GetMapping({"/{manufacturerId}"})
     ResponseEntity<ManufacturerDto> getManufacturer(@PathVariable("manufacturerId") Long id) {
-        return manufacturerGateway.getManufacturer(id);
+        return (ResponseEntity<ManufacturerDto>) manufacturerGateway.getManufacturer(id);
     }
 
     @PostMapping
     ResponseEntity<ManufacturerDto> handlePost(@Validated @RequestBody ManufacturerDto manufacturerDto) {
-        return manufacturerGateway.handlePost(manufacturerDto);
+        return (ResponseEntity<ManufacturerDto>) manufacturerGateway.handlePost(manufacturerDto);
     }
 
     @PutMapping({"/{manufacturerId}"})
     ResponseEntity<ManufacturerDto> handleUpdate(@PathVariable("manufacturerId") Long id,
                                                  @Validated @RequestBody ManufacturerDto manufacturerDto) {
-        return manufacturerGateway.handleUpdate(id, manufacturerDto);
+        return (ResponseEntity<ManufacturerDto>) manufacturerGateway.handleUpdate(id, manufacturerDto);
     }
 
     @DeleteMapping({"/{manufacturerId}"})
